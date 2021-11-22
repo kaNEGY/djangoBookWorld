@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Главная страница</h1>
+    <p>Добро пожаловать в <em>Мир книг</em>!
+        Это отличный веб-сайт от чпечки для чпекеров, от чпекочки для чпекавидз.</p>
+
+<h2>Динамический контент</h2>
+
+    <p>База данных сайта содержит це:</p>
+    <ul>
+        <li><strong>Количество книг: </strong>{{ numBooks }}</li>
+        <li><strong>Количество экземпляров: </strong>{{ numInstances }}</li>
+        <li><strong>Количество в заказе: </strong>{{ numInstancesAvailable }}</li>
+        <li><strong>Количество авторов: </strong>{{ numAuthors }}</li>
+    </ul>
+    <p>Количество посещений данной страницы - {{ num_visits }}</p>
+{% endblock %}

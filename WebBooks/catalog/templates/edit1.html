@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h3>Список авторов в Базе Данных</h3>
+<h4>{{ author.firstName }} {{ author.lastName }}</h4>
+
+<form method="POST">
+    {% csrf_token %}
+    <p><label>Изменить имя</label><br>
+    <input type="text" name="firstName" value="{{ author.firstName }}" />
+    </p>
+    <p><label>Изменить фамилию</label><br>
+        <input type="text" name="lastName" value="{{ author.lastName }}" />
+    </p>
+    <p><label>Изменить дату рождения</label><br>
+        <input type="date" name="dateOfBirth" value="{{ author.dateOfBirth }}" />
+    </p>
+    <p><label>Изменить дату смерти</label><br>
+        <input type="date" name="dateOfDeath" value="{{ author.dateOfDeath }}" />
+    </p>
+    <input type="submit" value="Сохранить">
+</form>
+
+{% endblock %}
